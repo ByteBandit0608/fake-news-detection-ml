@@ -4,15 +4,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 # Example dataset
-data = {
-    "text": [
-        "Government announces new economic policy",
-        "Shocking celebrity scandal revealed",
-        "Scientists discover new species",
-        "Fake news spreading misinformation online"
-    ],
-    "label": [1, 0, 1, 0]
-}
+data = pd.read_csv("data/news_sample.csv")
+
+X = data["text"]
+y = data["label"]
 
 df = pd.DataFrame(data)
 
