@@ -1,4 +1,4 @@
-Fake News Detection using Machine Learning
+# Fake News Detection using Machine Learning
 
 This project builds a machine learning model to classify news articles as real or fake using text analysis.
 
@@ -14,3 +14,4 @@ src/ – model training code
 ## How to Run
 pip install -r requirements.txt
 python src/train_model.py
+notebooks/ – exploratory analysis and model experimentation
