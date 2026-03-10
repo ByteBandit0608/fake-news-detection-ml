@@ -1,2 +1,16 @@
-# fake-news-detection-ml
-This project builds a machine learning model to classify news articles as real or fake using text analysis. It uses TF-IDF for feature extraction and a Logistic Regression classifier for prediction. The goal of the project is to explore basic NLP techniques and build a simple text classification pipeline using Python and scikit-learn.
+Fake News Detection using Machine Learning
+
+This project builds a machine learning model to classify news articles as real or fake using text analysis.
+
+## Technologies
+- Python
+- Pandas
+- Scikit-learn
+
+## Project Structure
+data/ – dataset files  
+src/ – model training code  
+
+## How to Run
+pip install -r requirements.txt
+python src/train_model.py
