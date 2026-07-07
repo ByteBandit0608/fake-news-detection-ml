@@ -1,177 +1,114 @@
-# Fake News Detection using Machine Learning
+# 📰 Fake News Detection System
 
-This project builds a machine learning model to classify news articles as real or fake using text analysis.
+An end-to-end machine learning web application that classifies news articles 
+as **Real** or **Fake** using NLP techniques, trained on nearly **45,000 news articles**.
 
-## Technologies
-- Python
-- Pandas
-- Scikit-learn
+![Home Page](assets/HomePage.png)
 
-## Project Structure
-data/ – dataset files  
-src/ – model training code  
+## 🎯 Results
 
-## How to Run
-pip install -r requirements.txt
-python src/train_model.py
-notebooks/ – exploratory analysis and model experimentation
+| Model | Accuracy |
+|---|---|
+| **Logistic Regression** | **98.94%** ✅ Selected |
+| Linear SVM | ~98.5% |
+| Multinomial Naive Bayes | ~94.2% |
 
-# 📰 Fake News Detection using Machine Learning
+## ✨ Features
 
-A machine learning web application that predicts whether a news article is **Real** or **Fake** using **Logistic Regression** and **TF-IDF Vectorization**.
-
-Built with **Python**, **Scikit-learn**, and **Streamlit**.
-
----
-
-## 🚀 Features
-
-- Detects whether a news article is Real or Fake
-- Interactive web interface using Streamlit
-- Prediction confidence score
-- Probability distribution for both classes
-- Live word and character count
-- Clean and responsive UI
-- Trained on nearly **45,000** news articles
-
----
-
-## 🖥️ Application Preview
-
-### Home Page
-
-![Home](assets/home.png)
-
----
-
-### Fake News Prediction
-
-![Fake Prediction](assets/fake_prediction.png)
-
----
-
-### Real News Prediction
-
-![Real Prediction](assets/real_prediction.png)
-
----
-
-## 🧠 Machine Learning Pipeline
-
-1. Load the Fake.csv and True.csv datasets
-2. Clean and preprocess the news text
-3. Convert text into TF-IDF feature vectors
-4. Train a Logistic Regression classifier
-5. Save the trained model and vectorizer using Joblib
-6. Deploy the model using Streamlit
-
----
-
-## 📊 Model Performance
-
-| Metric | Score |
-|---------|-------|
-| Accuracy | **98.94%** |
-| Algorithm | Logistic Regression |
-| Feature Extraction | TF-IDF |
-| Dataset Size | 44,898 Articles |
-
----
+- Real-time news classification with confidence scores
+- Interactive Streamlit web interface
+- Class probability display (Real vs Fake %)
+- Complete NLP pipeline: preprocessing → TF-IDF → inference
+- Confusion matrix and wordcloud visualizations
 
 ## 🛠️ Tech Stack
 
-- Python
-- Scikit-learn
-- Pandas
-- NumPy
-- Joblib
-- Streamlit
-- Matplotlib
-- WordCloud
+| Category | Tools |
+|---|---|
+| Language | Python |
+| ML & NLP | Scikit-learn, TF-IDF Vectorization |
+| Data Processing | Pandas, NumPy |
+| Deployment | Streamlit, Joblib |
+| Environment | Jupyter Notebook |
 
----
-
-## 📁 Project Structure
-
-```text
+## 🗂️ Project Structure
 fake-news-detection-ml/
-│
 ├── app/
-│   └── app.py
-│
+│   └── app.py                  # Streamlit web application
+├── assets/                     # UI screenshots
 ├── data/
-│   ├── Fake.csv
-│   └── True.csv
-│
+│   ├── Fake.csv                # Fake news dataset
+│   ├── True.csv                # Real news dataset
+│   └── src/                    # Sample data & training script
 ├── models/
-│   ├── logistic_regression.pkl
-│   └── tfidf_vectorizer.pkl
-│
+│   ├── logistic_regression.pkl # Trained model
+│   └── tfidf_vectorizer.pkl    # Fitted vectorizer
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
-│   └── 02_model_comparison.ipynb
-│
-├── results/
-│
+│   └── fake_news_analysis.ipynb
+├── results/                    # Confusion matrices & visualizations
 ├── src/
-│   ├── preprocessing.py
-│   ├── train.py
-│   └── predict.py
-│
-├── assets/
-│   ├── home.png
-│   ├── fake_prediction.png
-│   └── real_prediction.png
-│
+│   ├── preprocessing.py        # Text preprocessing pipeline
+│   ├── train.py                # Model training script
+│   └── predict.py              # Inference logic
 ├── requirements.txt
-├── .gitignore
 └── README.md
-```
+## 🚀 How to Run
 
----
-
-## ⚙️ Installation
-
-Clone the repository
-
+**1. Clone the repository**
 ```bash
 git clone https://github.com/ByteBandit0608/fake-news-detection-ml.git
-```
-
-Move into the project directory
-
-```bash
 cd fake-news-detection-ml
 ```
 
-Install dependencies
-
+**2. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application
-
+**3. Run the Streamlit app**
 ```bash
 streamlit run app/app.py
 ```
 
----
+## 📸 Screenshots
 
-## 🔮 Future Improvements
+### 🏠 Home Page
+![Home Page](assets/HomePage.png)
 
-- Support for transformer-based models (BERT)
-- Explainable AI using SHAP/LIME
-- News source credibility analysis
-- URL-based fake news detection
-- Multi-language support
+### ✅ Real News Prediction
+![Real News](assets/RealNews.png)
+![Real News 2](assets/RealNews2.png)
 
----
+### ❌ Fake News Prediction
+![Fake News](assets/FakeNews.png)
+![Fake News 2](assets/FakeNews2.png)
 
-## 👨‍💻 Author
+## 📊 Visualizations
 
-**Bhavya Posham**
+### Confusion Matrices
+| Logistic Regression | Linear SVM | Naive Bayes |
+|---|---|---|
+| ![LR](results/confusion_lr.png) | ![SVM](results/confusion_svm.png) | ![NB](results/confusion_nb.png) |
 
-AI & Machine Learning Undergraduate (2028)
+### Word Clouds
+| Real News | Fake News |
+|---|---|
+| ![Real](results/real_wordcloud.png) | ![Fake](results/fake_wordcloud.png) |
 
-Interested in Machine Learning, Computer Vision, NLP, and AI applications.
+## 📋 Requirements
+pandas
+numpy
+scikit-learn
+streamlit
+joblib
+## 📌 Dataset
+
+- **Source:** ISOT Fake News Dataset
+- **Size:** 44,898 news articles
+- **Labels:** REAL / FAKE
+
+## 👨‍💻 Developed by
+
+**Bhavya Posham**  
+[GitHub](https://github.com/ByteBandit0608) • [LinkedIn](https://www.linkedin.com/in/bhavya-posham-208a702b0/)
